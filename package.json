@@ -3,6 +3,13 @@
   "version": "1.0.0-alpha1",
   "description": "Interactive CLI to scaffold a SaaS boilerplate",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrybtw/create-a-saas.git"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
