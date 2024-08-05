@@ -1,0 +1,35 @@
+{
+  "name": "create-a-saas",
+  "version": "1.0.0-alpha1",
+  "description": "Interactive CLI to scaffold a SaaS boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "start": "node dist/index.js",
+    "format": "prettier '**/*.{cjs,mjs,ts,tsx,md,json}' --ignore-path ../.gitignore --ignore-unknown --no-error-on-unmatched-pattern --write",
+    "format:check": "prettier '**/*.{cjs,mjs,ts,tsx,md,json}' --ignore-path ../.gitignore --ignore-unknown --no-error-on-unmatched-pattern --check",
+    "pub:alpha": "pnpm build && npm publish --tag alpha",
+    "pub:beta": "pnpm build && npm publish --tag beta",
+    "pub:next": "pnpm build && npm publish --tag next",
+    "pub:release": "pnpm build && npm publish"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": "./dist/index.js",
+  "bin": {
+    "create-a-saas": "dist/index.js"
+  },
+  "author": "that barry guy <unknown@unknown.not> (https://github.com/barrybtw)",
+  "keywords": [],
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@types/node": "^22.1.0",
+    "prettier": "^3.3.3",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
+}
